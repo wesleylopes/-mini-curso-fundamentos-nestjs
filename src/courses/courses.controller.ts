@@ -23,10 +23,14 @@ export class CoursesController {
  update(@Param('id') id:string ,@Body() body){
    return this.coursesService.update(id,body)
  }
-
  @Delete(':id')
  remove(@Param('id') id: string){
    return this.coursesService.remove(id);
+ }
+
+ @Delete()
+ removeAll(){
+   return this.coursesService.removeAll();
  }
     
 }
